@@ -17,8 +17,6 @@ Review all configured rules.
 Remove an unnecessary or incorrect rule.
 ### Test Network Connection
 Verify if a specific port is open or blocked.
-### Returns connection success if port 80 is allowed.
-To test a blocked port (should fail)
 ## Purpose
 - Control access to your system's network services.
 - Prevent unauthorized inbound connections.
