@@ -8,12 +8,12 @@ Configure and test firewall rules to allow or block specific network traffic on 
 - Optional: Telnet client
 ## Windows Implementation
 ### Enable Windows Firewall
-Purpose: Ensure the firewall is active and enforcing rules.
-Command
+Ensure the firewall is active and enforcing rules.
+#### Command
 '''powershell
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 ### Allow Inbound HTTP Traffic (Port 80)
-Purpose: Permit web server traffic (HTTP) to your system.
+Permit web server traffic (HTTP) to your system.
 #### Command
 '''powershell
 New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -LocalPort 80 -Protocol TCP -Action Allow
