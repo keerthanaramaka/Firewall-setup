@@ -14,7 +14,7 @@ Command
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 ### Allow Inbound HTTP Traffic (Port 80)
 Purpose: Permit web server traffic (HTTP) to your system.
-Command
+#### Command
 '''powershell
 New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -LocalPort 80 -Protocol TCP -Action Allow
 ### Block Inbound Telnet Traffic (Port 23)
