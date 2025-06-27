@@ -9,38 +9,16 @@ Configure and test firewall rules to allow or block specific network traffic on 
 ## Windows Implementation
 ### Enable Windows Firewall
 Ensure the firewall is active and enforcing rules.
-#### Command
-'''powershell
-Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
-### Allow Inbound HTTP Traffic (Port 80)
-Permit web server traffic (HTTP) to your system.
-#### Command
-'''powershell
-New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -LocalPort 80 -Protocol TCP -Action Allow
 ### Block Inbound Telnet Traffic (Port 23)
-Purpose: Prevent insecure remote access attempts.
-Command
-'''powershell
-New-NetFirewallRule -DisplayName "Block Telnet" -Direction Inbound -LocalPort 23 -Protocol TCP -Action Block
+Prevent insecure remote access attempts.
 ### View Existing Firewall Rules
-Purpose: Review all configured rules.
-Command
-'''powershell
-Get-NetFirewallRule
+Review all configured rules.
 ### Delete a Specific Firewall Rule
-Purpose: Remove an unnecessary or incorrect rule.
-Command
-'''powershell
-Remove-NetFirewallRule -DisplayName "Block Telnet"
+Remove an unnecessary or incorrect rule.
 ### Test Network Connection
-Purpose: Verify if a specific port is open or blocked.
-Command
-'''powershell
-Test-NetConnection -ComputerName localhost -Port 80
+Verify if a specific port is open or blocked.
 ### Returns connection success if port 80 is allowed.
 To test a blocked port (should fail)
-'''powershell
-Test-NetConnection -ComputerName localhost -Port 23
 ## Purpose
 - Control access to your system's network services.
 - Prevent unauthorized inbound connections.
