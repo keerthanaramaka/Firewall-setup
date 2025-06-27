@@ -1,0 +1,8 @@
+The following commands are used :-
+-  Enable the telnet by using the following command - "dism /online /Enable-Feature /FeatureName:TelnetClient" and install the telnet client . (or)
+-  Open the Control Panel → Programs → Programs and Features.Click on "Turn Windows features on or off" in the left pane.Scroll down and check the box for "Telnet Client".Click OK and wait for the installation to complete. Restart your computer if prompted.
+-  Now block a particular port i.e., port 23 with the following command "telnet localhost 23".
+-  To block the port 23 first we need to open windows defender firewall or by pressing Win+R and type wf.msc and then enter .
+-  In defender firewall go to "inbound rules" and create a "new inbound rule" with port 23 selected and select the "block the connection" and save it .
+-  pen powershell and run it as administrator and type the command "telent localhost 23" where we will see the output as (Connecting To localhost...Could not open connection to the host, on port 23: Connect failed) .
+-  After completing the task delete the inbound rule with port 23 and repeat the same process.
